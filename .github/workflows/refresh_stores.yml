@@ -3,7 +3,7 @@ name: Refresh Trust Stores
 on:
   schedule:
     # Run this workflow once a week
-    - cron:  '0 0 * * 0'
+    - cron:  '30 15 * * *'
 
 jobs:
   build:
@@ -53,7 +53,7 @@ jobs:
         tar -zcf trust_stores_as_pem.tar.gz *
         mv trust_stores_as_pem.tar.gz ../docs
         cd ..
-        git config user.email "trust_stores_observatory deploy key"
-        git config user.name "trust_stores_observatory deploy key"
+        git config user.email "alex@Alexs-MacBook-Air.local"
+        git config user.name "alex@Alexs-MacBook-Air.local"
         git commit -am 'Automated update of the trust stores'
         git push
