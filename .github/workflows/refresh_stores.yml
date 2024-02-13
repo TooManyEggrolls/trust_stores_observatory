@@ -3,7 +3,7 @@ name: Refresh Trust Stores
 on:
   schedule:
     # Run this workflow once a week
-    - cron:  '30 15 * * *'
+    - cron:  '0 0 * * 0'
 
 jobs:
   build:
